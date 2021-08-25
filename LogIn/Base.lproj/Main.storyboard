@@ -52,6 +52,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                         </state>
+                                        <connections>
+                                            <action selector="forgotNameButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="6js-Sj-xLh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pj5-tS-ec3" userLabel="Forfot Password Button">
                                         <rect key="frame" x="214" y="0.0" width="81" height="30"/>
@@ -60,6 +63,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                         </state>
+                                        <connections>
+                                            <action selector="forgotPasswordButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="H39-ny-APq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -80,8 +86,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="kSi-V4-kGs"/>
                     <connections>
-                        <outlet property="PasswordTF" destination="vrm-Or-r18" id="IQv-29-vW7"/>
-                        <outlet property="UsernameTF" destination="eGp-Xf-Fxm" id="hvc-Ph-Yw9"/>
+                        <outlet property="passwordTF" destination="vrm-Or-r18" id="IQv-29-vW7"/>
+                        <outlet property="usernameTF" destination="eGp-Xf-Fxm" id="hvc-Ph-Yw9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
