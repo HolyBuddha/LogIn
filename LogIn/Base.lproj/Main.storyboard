@@ -22,12 +22,12 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eGp-Xf-Fxm" userLabel="User Name Text Field">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" spellCheckingType="no" textContentType="username"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vrm-Or-r18" userLabel="Password Text Field">
                                         <rect key="frame" x="0.0" y="66" width="295" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6a8-dg-sG4" userLabel="LogIn Button">
                                         <rect key="frame" x="0.0" y="132" width="295" height="36"/>
@@ -72,6 +72,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.43649173529858998" green="0.67901395915444951" blue="0.91510009765625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="5v1-Bo-fXZ" firstAttribute="top" secondItem="c0j-KA-7A2" secondAttribute="bottom" constant="16" id="3Qx-hM-XiJ"/>
                             <constraint firstItem="c0j-KA-7A2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="528-tZ-81M"/>
@@ -83,6 +84,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c0j-KA-7A2" secondAttribute="trailing" constant="40" id="eKQ-xU-GhZ"/>
                             <constraint firstItem="c0j-KA-7A2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yrq-kA-zec"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="auh-Mo-no6" appends="YES" id="nyh-6b-vFl"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="kSi-V4-kGs"/>
                     <connections>
@@ -91,6 +95,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="auh-Mo-no6">
+                    <connections>
+                        <action selector="tapForKeyboardClosing:" destination="BYZ-38-t0r" id="AGY-cX-ibI"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1016.25" y="77.112676056338032"/>
         </scene>
