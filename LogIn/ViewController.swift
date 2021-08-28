@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
     }
 
     @IBAction func tapForKeyboardClosing(_ sender: Any) {
@@ -43,6 +42,16 @@ class ViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeViewController = segue.destination as? WelcomeViewController else {return}
+        welcomeViewController.helloUser = "Hello, \(defaultUsername)!"
+        //helloUserLabel.text = "Hello, \(welcomeVC.defaultUsername)!"
+    }
+    
+    @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
+        usernameTF.text = ""
+        passwordTF.text = ""
+    }
     
     private func showAlert(with title: String, and message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

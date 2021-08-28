@@ -11,17 +11,16 @@ class WelcomeViewController: UIViewController {
 
     @IBOutlet var helloUserLabel: UILabel!
     
+    var helloUser: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        helloUserLabel.text = helloUser
+        
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let _ = segue.destination as? ViewController else {return}
-        helloUserLabel.text = "Hi"
-        //helloUserLabel.text = "Hello, \(welcomeVC.defaultUsername)!"
-}
     
-    @IBAction func logOutButtonPressed() {
-        dismiss(animated: true)
-    }
+//    @IBAction func logOutButtonPressed() {
+//        dismiss(animated: true)
+//    }
 }

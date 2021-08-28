@@ -125,7 +125,7 @@
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                         <state key="normal" title="Log out"/>
                                         <connections>
-                                            <action selector="logOutButtonPressed" destination="yjY-PE-tGs" eventType="touchUpInside" id="dny-LC-gIA"/>
+                                            <segue destination="QHB-Bv-vZH" kind="unwind" unwindAction="unwindFor:" id="SoP-r0-d3e"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -143,13 +143,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A5k-7S-xSt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="QHB-Bv-vZH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1839.375" y="76.056338028169009"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gCr-1F-9Su">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ayj-ig-mta" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dtq-Re-UUf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="181-9u-XUJ">
@@ -161,6 +161,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sUb-oO-Z0h"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ayj-ig-mta" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.75" y="77.112676056338032"/>
         </scene>
