@@ -58,7 +58,6 @@ extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == usernameTF {
             passwordTF.becomeFirstResponder()
-            print("!")
         } else {
             LoginButtonPressed()
             performSegue(withIdentifier: "showWelcomeVC", sender: nil)
