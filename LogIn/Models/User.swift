@@ -25,10 +25,10 @@ struct Person {
 }
 
 enum Hobbies: String {
-    case sport = "Я люблю утренние пробежки"
-    case photography = "Я люблю фотографировать людей и пейзажи"
-    case music = "Я люблю играть на гитаре"
-    case games = "Я люблю видеоигры"
+    case sport = "Я люблю делать зарядку и бегать по утрам."
+    case photography = "Я люблю фотографировать, в частности людей и пейзажи."
+    case music = "Я люблю играть на гитаре."
+    case games = "Я люблю видеоигры."
 }
 
 
