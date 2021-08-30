@@ -12,27 +12,43 @@ class ViewController: UIViewController {
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let defaultUsername = "User"
-    private let defaultPassword = "Password"
+    let user = User.getInfoAboutUser()
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let welcomeViewController = segue.destination as? WelcomeViewController else {return}
+//        welcomeViewController.helloUser = "Hello, \(user.person.name) \(user.person.surname)!"
+//    }override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeViewController = segue.destination as? WelcomeViewController else {return}
-        welcomeViewController.helloUser = "Hello, \(defaultUsername)!"
+        let tabBarController = segue.destination as! UITabBarController
+        let viewControllers = tabBarController.viewControllers!
+        
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.helloUser =
+                    "Hello, \(user.person.name) \(user.person.surname)!"}
+            else if let navigationVC = viewController as? UINavigationController {
+                let aboutUserVC = navigationVC.topViewController as! AboutMeViewController
+                aboutUserVC.myInfo = "Меня зовут \(user.person.name) \(user.person.surname). Мне \(user.person.age) года. \(user.person.hobbies.rawValue)"
+                aboutUserVC.title = "\(user.person.name) \(user.person.surname)"
+            }
+        }
     }
-    
+                    
+                    
     @IBAction func LoginButtonPressed() {
-        if usernameTF.text != defaultUsername || passwordTF.text != defaultPassword {
+        if usernameTF.text != user.username || passwordTF.text != user.password {
             showAlert(with: "Invalid username or password", and: "Please enter correct username and password")
             passwordTF.text = ""
         }
     }
 
     @IBAction func forgotNameButtonPressed() {
-        showAlert(with: "Forgot your name???😩", and: "Your name is \(defaultUsername)")
+        showAlert(with: "Forgot your name???😩", and: "Your name is \(user.username)")
     }
     
     @IBAction func forgotPasswordButtonPressed() {
-        showAlert(with: "Forgot your pass???🤨", and: "Your pass is \(defaultPassword)")
+        showAlert(with: "Forgot your pass???🤨", and: "Your pass is \(user.password)")
     }
     
     @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12CD16FE26DC11D600967232 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CD16FD26DC11D600967232 /* User.swift */; };
+		12CD170326DC56B700967232 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CD170226DC56B700967232 /* AboutMeViewController.swift */; };
 		12FCA6AD26D6CDBD005D8DB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FCA6AC26D6CDBD005D8DB8 /* AppDelegate.swift */; };
 		12FCA6AF26D6CDBD005D8DB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FCA6AE26D6CDBD005D8DB8 /* SceneDelegate.swift */; };
 		12FCA6B126D6CDBD005D8DB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FCA6B026D6CDBD005D8DB8 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12CD16FD26DC11D600967232 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		12CD170226DC56B700967232 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		12FCA6A926D6CDBD005D8DB8 /* LogIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12FCA6AC26D6CDBD005D8DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12FCA6AE26D6CDBD005D8DB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12CD16F826DC105700967232 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				12FCA6B726D6CDBE005D8DB8 /* LaunchScreen.storyboard */,
+				12FCA6B226D6CDBD005D8DB8 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		12CD16F926DC10A800967232 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				12FCA6C026D6E4B2005D8DB8 /* WelcomeViewController.swift */,
+				12FCA6B026D6CDBD005D8DB8 /* ViewController.swift */,
+				12CD170226DC56B700967232 /* AboutMeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		12CD16FA26DC10C700967232 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				12FCA6B526D6CDBE005D8DB8 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		12CD16FB26DC10D900967232 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				12FCA6AC26D6CDBD005D8DB8 /* AppDelegate.swift */,
+				12FCA6AE26D6CDBD005D8DB8 /* SceneDelegate.swift */,
+				12FCA6BA26D6CDBE005D8DB8 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		12CD16FC26DC115C00967232 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12CD16FD26DC11D600967232 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		12FCA6A026D6CDBD005D8DB8 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +107,11 @@
 		12FCA6AB26D6CDBD005D8DB8 /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
-				12FCA6C026D6E4B2005D8DB8 /* WelcomeViewController.swift */,
-				12FCA6AC26D6CDBD005D8DB8 /* AppDelegate.swift */,
-				12FCA6AE26D6CDBD005D8DB8 /* SceneDelegate.swift */,
-				12FCA6B026D6CDBD005D8DB8 /* ViewController.swift */,
-				12FCA6B226D6CDBD005D8DB8 /* Main.storyboard */,
-				12FCA6B526D6CDBE005D8DB8 /* Assets.xcassets */,
-				12FCA6B726D6CDBE005D8DB8 /* LaunchScreen.storyboard */,
-				12FCA6BA26D6CDBE005D8DB8 /* Info.plist */,
+				12CD16F926DC10A800967232 /* ViewControllers */,
+				12CD16FC26DC115C00967232 /* Models */,
+				12CD16F826DC105700967232 /* Storyboard */,
+				12CD16FB26DC10D900967232 /* App */,
+				12CD16FA26DC10C700967232 /* Resources */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
@@ -142,7 +188,9 @@
 			files = (
 				12FCA6B126D6CDBD005D8DB8 /* ViewController.swift in Sources */,
 				12FCA6C126D6E4B2005D8DB8 /* WelcomeViewController.swift in Sources */,
+				12CD170326DC56B700967232 /* AboutMeViewController.swift in Sources */,
 				12FCA6AD26D6CDBD005D8DB8 /* AppDelegate.swift in Sources */,
+				12CD16FE26DC11D600967232 /* User.swift in Sources */,
 				12FCA6AF26D6CDBD005D8DB8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +340,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q3NH456PVT;
-				INFOPLIST_FILE = LogIn/Info.plist;
+				INFOPLIST_FILE = LogIn/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +359,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q3NH456PVT;
-				INFOPLIST_FILE = LogIn/Info.plist;
+				INFOPLIST_FILE = LogIn/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
